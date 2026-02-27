@@ -36,5 +36,5 @@ jobs:
 
       - name: Restart configserver deployment
         run: |
-          kubectl rollout restart deployment/configserver
-          kubectl rollout status deployment/configserver
+          kubectl --insecure-skip-tls-verify rollout restart deployment/configserver
+          kubectl --insecure-skip-tls-verify rollout status deployment/configserver
